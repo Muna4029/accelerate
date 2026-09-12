@@ -1026,8 +1026,8 @@ class DeepSpeedIntegrationTest(TempDirTestCase):
                     ]
                 )
                 for i in range(3):
-                    if f"stage_{i+1}" in spec:
-                        cmd_stage.extend([f"--zero_stage={i+1}"])
+                    if f"stage_{i + 1}" in spec:
+                        cmd_stage.extend([f"--zero_stage={i + 1}"])
                         break
                 cmd_stage.extend(
                     [
