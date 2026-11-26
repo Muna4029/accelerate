@@ -15,16 +15,10 @@
 # limitations under the License.
 import argparse
 
+from accelerate import init_empty_weights
+from accelerate.utils import calculate_maximum_sizes, convert_bytes, is_timm_available, is_transformers_available
 from huggingface_hub import model_info
 from huggingface_hub.utils import GatedRepoError, RepositoryNotFoundError
-
-from accelerate import init_empty_weights
-from accelerate.utils import (
-    calculate_maximum_sizes,
-    convert_bytes,
-    is_timm_available,
-    is_transformers_available,
-)
 
 
 if is_transformers_available():
